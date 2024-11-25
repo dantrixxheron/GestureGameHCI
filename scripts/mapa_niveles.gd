@@ -11,10 +11,10 @@ func _ready():
 		menu_float.connect("change_theme", Callable(node, "_on_change_theme"))
 
 func _on_btn_go_to_tutorial_pressed():
-	var next_escene=load("res://tutorial.tscn")
-	get_tree().change_scene_to_file("res://tutorial.tscn")
+	var next_escene=load("res://components/tutorial.tscn")
+	get_tree().change_scene_to_file("res://components/tutorial.tscn")
 
 
 func _on_btn_go_to_juego_pressed():
-	var next_scene = load("res://laberinto.tscn")
-	get_tree().change_scene_to_file("res://laberinto.tscn")
+	var next_scene = load("res://components/laberinto.tscn")
+	get_tree().change_scene_to_file("res://components/laberinto.tscn")

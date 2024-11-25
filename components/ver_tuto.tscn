@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dpt183n3bol6m"]
 
-[ext_resource type="Script" path="res://bkgrnd.gd" id="1_5mo8d"]
-[ext_resource type="Script" path="res://ver_tuto.gd" id="1_bpgiy"]
-[ext_resource type="Script" path="res://lbl.gd" id="2_kprlj"]
-[ext_resource type="Script" path="res://btn.gd" id="4_m56jc"]
+[ext_resource type="Script" path="res://scripts/bkgrnd.gd" id="1_5mo8d"]
+[ext_resource type="Script" path="res://scripts/ver_tuto.gd" id="1_bpgiy"]
+[ext_resource type="Script" path="res://scripts/lbl.gd" id="2_kprlj"]
+[ext_resource type="Script" path="res://scripts/btn.gd" id="4_m56jc"]
 
 [node name="verTuto" type="CanvasLayer"]
 script = ExtResource("1_bpgiy")

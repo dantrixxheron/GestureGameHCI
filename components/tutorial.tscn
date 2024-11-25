@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=3 uid="uid://n872eaxqbpky"]
 
-[ext_resource type="Script" path="res://tutorial.gd" id="1_0o2po"]
-[ext_resource type="PackedScene" uid="uid://cwv5anaygnvd8" path="res://character_body_2d.tscn" id="2_8hdsx"]
-[ext_resource type="Script" path="res://bkgrnd.gd" id="2_g2146"]
-[ext_resource type="PackedScene" uid="uid://cwhm1uebhdeo1" path="res://pared_base.tscn" id="3_enu0h"]
-[ext_resource type="Script" path="res://btn.gd" id="5_7aj5e"]
-[ext_resource type="PackedScene" uid="uid://c36idvxvuvb7p" path="res://menu_float.tscn" id="5_v7p1c"]
-[ext_resource type="PackedScene" uid="uid://dpt183n3bol6m" path="res://ver_tuto.tscn" id="6_hw0fk"]
-[ext_resource type="PackedScene" uid="uid://ddpddcqg77s7p" path="res://accion_realizando.tscn" id="8_du28g"]
+[ext_resource type="Script" path="res://scripts/tutorial.gd" id="1_0o2po"]
+[ext_resource type="PackedScene" uid="uid://cwv5anaygnvd8" path="res://characters/character_body_2d.tscn" id="2_8hdsx"]
+[ext_resource type="Script" path="res://scripts/bkgrnd.gd" id="2_g2146"]
+[ext_resource type="PackedScene" uid="uid://cwhm1uebhdeo1" path="res://components/pared_base.tscn" id="3_enu0h"]
+[ext_resource type="Script" path="res://scripts/btn.gd" id="5_7aj5e"]
+[ext_resource type="PackedScene" uid="uid://c36idvxvuvb7p" path="res://components/menu_float.tscn" id="5_v7p1c"]
+[ext_resource type="PackedScene" uid="uid://dpt183n3bol6m" path="res://components/ver_tuto.tscn" id="6_hw0fk"]
+[ext_resource type="PackedScene" uid="uid://ddpddcqg77s7p" path="res://components/accion_realizando.tscn" id="8_du28g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pete"]
 size = Vector2(318, 90.5)

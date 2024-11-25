@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://bgbhsjdj1l1kr"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_xndxp"]
-[ext_resource type="Script" path="res://bkgrnd.gd" id="2_qbq12"]
-[ext_resource type="Script" path="res://btn.gd" id="3_olum1"]
-[ext_resource type="Script" path="res://lbl.gd" id="3_u8825"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_xndxp"]
+[ext_resource type="Script" path="res://scripts/bkgrnd.gd" id="2_qbq12"]
+[ext_resource type="Script" path="res://scripts/btn.gd" id="3_olum1"]
+[ext_resource type="Script" path="res://scripts/lbl.gd" id="3_u8825"]
 
 [node name="Menu" type="Control"]
 process_mode = 3

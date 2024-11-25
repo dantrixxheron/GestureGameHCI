@@ -13,4 +13,3 @@ func _apply_theme():
 		add_theme_color_override("font_color", Color.WHITE)
 	else:
 		add_theme_color_override("font_color", Color.BLACK)
-		print("texto en negro")

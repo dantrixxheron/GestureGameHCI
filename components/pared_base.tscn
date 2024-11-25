@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwhm1uebhdeo1"]
 
-[ext_resource type="Script" path="res://pared_base.gd" id="1_ta62h"]
-[ext_resource type="Script" path="res://bkgrnd-reverse.gd" id="2_xbrde"]
+[ext_resource type="Script" path="res://scripts/pared_base.gd" id="1_ta62h"]
+[ext_resource type="Script" path="res://scripts/bkgrnd-reverse.gd" id="2_xbrde"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2vpv"]
 size = Vector2(497, 429)

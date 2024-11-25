@@ -75,14 +75,14 @@ Settings/Show_Tooltips=true
 [application]
 
 config/name="MazeGestureGameHCI"
-run/main_scene="res://mapa_niveles.tscn"
+run/main_scene="res://components/mapa_niveles.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.png"
 
 [autoload]
 
-MenuFloat="*res://menu_float.gd"
-ThemeManager="*res://ThemeManager.gd"
+MenuFloat="*res://scripts/menu_float.gd"
+ThemeManager="*res://scripts/ThemeManager.gd"
 
 [display]
 

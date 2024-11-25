@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://c36idvxvuvb7p"]
 
-[ext_resource type="Script" path="res://menu_float.gd" id="1_mrfkj"]
-[ext_resource type="Script" path="res://bkgrnd.gd" id="2_ngrph"]
-[ext_resource type="Script" path="res://btn.gd" id="3_7x0gb"]
+[ext_resource type="Script" path="res://scripts/menu_float.gd" id="1_mrfkj"]
+[ext_resource type="Script" path="res://scripts/bkgrnd.gd" id="2_ngrph"]
+[ext_resource type="Script" path="res://scripts/btn.gd" id="3_7x0gb"]
 
 [node name="menuFloat" type="Control"]
 layout_mode = 3

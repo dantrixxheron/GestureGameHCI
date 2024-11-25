@@ -10,5 +10,5 @@ func _on_btn_reinicio_pressed():
 
 func _on_btn_go_to_niveles_pressed():
 	get_tree().paused = false
-	var next_scene = load("res://mapa_niveles.tscn")
-	get_tree().change_scene_to_file("res://mapa_niveles.tscn")
+	var next_scene = load("res://components/mapa_niveles.tscn")
+	get_tree().change_scene_to_file("res://components/mapa_niveles.tscn")

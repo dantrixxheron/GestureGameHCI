@@ -1,13 +1,13 @@
 [gd_scene load_steps=10 format=3 uid="uid://b5cpxbp31732s"]
 
-[ext_resource type="Script" path="res://laberinto.gd" id="1_ymrrh"]
-[ext_resource type="Script" path="res://bkgrnd.gd" id="2_11yth"]
-[ext_resource type="PackedScene" uid="uid://ddpddcqg77s7p" path="res://accion_realizando.tscn" id="3_k1ciq"]
-[ext_resource type="PackedScene" uid="uid://cwv5anaygnvd8" path="res://character_body_2d.tscn" id="4_46rqa"]
-[ext_resource type="PackedScene" uid="uid://cwhm1uebhdeo1" path="res://pared_base.tscn" id="5_0os7q"]
-[ext_resource type="PackedScene" uid="uid://bgbhsjdj1l1kr" path="res://menu.tscn" id="7_sf85v"]
-[ext_resource type="Script" path="res://btn.gd" id="8_mbyap"]
-[ext_resource type="PackedScene" uid="uid://c36idvxvuvb7p" path="res://menu_float.tscn" id="9_8h428"]
+[ext_resource type="Script" path="res://scripts/laberinto.gd" id="1_ymrrh"]
+[ext_resource type="Script" path="res://scripts/bkgrnd.gd" id="2_11yth"]
+[ext_resource type="PackedScene" uid="uid://ddpddcqg77s7p" path="res://components/accion_realizando.tscn" id="3_k1ciq"]
+[ext_resource type="PackedScene" uid="uid://cwv5anaygnvd8" path="res://characters/character_body_2d.tscn" id="4_46rqa"]
+[ext_resource type="PackedScene" uid="uid://cwhm1uebhdeo1" path="res://components/pared_base.tscn" id="5_0os7q"]
+[ext_resource type="PackedScene" uid="uid://bgbhsjdj1l1kr" path="res://components/menu.tscn" id="7_sf85v"]
+[ext_resource type="Script" path="res://scripts/btn.gd" id="8_mbyap"]
+[ext_resource type="PackedScene" uid="uid://c36idvxvuvb7p" path="res://components/menu_float.tscn" id="9_8h428"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72s25"]
 radius = 29.6875

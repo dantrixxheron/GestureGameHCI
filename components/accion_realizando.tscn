@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://ddpddcqg77s7p"]
 
-[ext_resource type="Script" path="res://lbl.gd" id="2_ljyhc"]
+[ext_resource type="Script" path="res://scripts/lbl.gd" id="2_ljyhc"]
 
 [node name="accionRealizando" type="CanvasLayer"]
 
