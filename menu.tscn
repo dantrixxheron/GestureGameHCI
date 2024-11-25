@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgbhsjdj1l1kr"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_xndxp"]
+[ext_resource type="Script" path="res://bkgrnd.gd" id="2_qbq12"]
+[ext_resource type="Script" path="res://btn.gd" id="3_olum1"]
+[ext_resource type="Script" path="res://lbl.gd" id="3_u8825"]
+
+[node name="Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xndxp")
+
+[node name="ColorRect" type="ColorRect" parent="." groups=["bkgrnd"]]
+layout_mode = 0
+offset_right = 1916.0
+offset_bottom = 1076.0
+script = ExtResource("2_qbq12")
+
+[node name="btnReinicio" type="Button" parent="."]
+layout_mode = 0
+offset_left = 424.0
+offset_top = 745.0
+offset_right = 815.0
+offset_bottom = 920.0
+theme_override_font_sizes/font_size = 70
+text = "REINICIAR"
+script = ExtResource("3_olum1")
+
+[node name="btnGoToNiveles" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 763.0
+offset_right = 1508.0
+offset_bottom = 931.0
+theme_override_font_sizes/font_size = 70
+text = "NIVELES"
+script = ExtResource("3_olum1")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = -44.0
+offset_top = 173.0
+offset_right = 1976.0
+offset_bottom = 719.0
+theme_override_font_sizes/font_size = 380
+text = "¡GANASTE!"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_u8825")
+
+[connection signal="pressed" from="btnReinicio" to="." method="_on_btn_reinicio_pressed"]
+[connection signal="pressed" from="btnGoToNiveles" to="." method="_on_btn_go_to_niveles_pressed"]

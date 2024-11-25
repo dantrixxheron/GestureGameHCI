@@ -1,0 +1,14 @@
+Camera2D
+ColorRect
+CanvasLayer
+Control
+Container
+Node2D
+Label
+TextureRect
+VideoStreamPlayer
+CanvasGroup
+Button
+CollisionShape2D
+Area2D
+AudioStreamPlayer2D

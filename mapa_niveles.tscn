@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://c57w0ng2hnt8g"]
+
+[ext_resource type="Script" path="res://mapa_niveles.gd" id="1_e2a5c"]
+[ext_resource type="Script" path="res://bkgrnd.gd" id="2_hneav"]
+[ext_resource type="Script" path="res://btn.gd" id="3_ibax7"]
+
+[sub_resource type="Theme" id="Theme_4gbfg"]
+
+[node name="mapa_niveles" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4gbfg")
+script = ExtResource("1_e2a5c")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1919.0
+offset_bottom = 1080.0
+color = Color(0.912289, 0.912289, 0.912289, 1)
+script = ExtResource("2_hneav")
+
+[node name="btnGoToTutorial" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 465.0
+offset_top = 345.0
+offset_right = 915.0
+offset_bottom = 669.0
+theme_override_font_sizes/font_size = 100
+text = "Tutorial"
+script = ExtResource("3_ibax7")
+
+[node name="btnGoToJuego" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 1125.0
+offset_top = 350.0
+offset_right = 1523.0
+offset_bottom = 664.0
+theme_override_font_sizes/font_size = 100
+text = "Juego"
+script = ExtResource("3_ibax7")
+
+[connection signal="pressed" from="ColorRect/btnGoToTutorial" to="." method="_on_btn_go_to_tutorial_pressed"]
+[connection signal="pressed" from="ColorRect/btnGoToJuego" to="." method="_on_btn_go_to_juego_pressed"]

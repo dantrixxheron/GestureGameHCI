@@ -1,0 +1,10 @@
+res://character_body_2d.tscn
+res://laberinto.gd
+res://tutorial.gd
+res://laberinto.tscn
+res://pared_base.tscn
+res://mapa_niveles.tscn
+res://menu_float.tscn
+res://tutorial.tscn
+res://ver_tuto.tscn
+res://accion_realizando.tscn

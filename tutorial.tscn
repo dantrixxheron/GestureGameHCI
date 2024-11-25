@@ -1,0 +1,121 @@
+[gd_scene load_steps=12 format=3 uid="uid://n872eaxqbpky"]
+
+[ext_resource type="Script" path="res://tutorial.gd" id="1_0o2po"]
+[ext_resource type="PackedScene" uid="uid://cwv5anaygnvd8" path="res://character_body_2d.tscn" id="2_8hdsx"]
+[ext_resource type="Script" path="res://bkgrnd.gd" id="2_g2146"]
+[ext_resource type="PackedScene" uid="uid://cwhm1uebhdeo1" path="res://pared_base.tscn" id="3_enu0h"]
+[ext_resource type="Script" path="res://btn.gd" id="5_7aj5e"]
+[ext_resource type="PackedScene" uid="uid://c36idvxvuvb7p" path="res://menu_float.tscn" id="5_v7p1c"]
+[ext_resource type="PackedScene" uid="uid://dpt183n3bol6m" path="res://ver_tuto.tscn" id="6_hw0fk"]
+[ext_resource type="PackedScene" uid="uid://ddpddcqg77s7p" path="res://accion_realizando.tscn" id="8_du28g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pete"]
+size = Vector2(318, 90.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vd3n"]
+size = Vector2(1854, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2pp6"]
+size = Vector2(12, 1035)
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_0o2po")
+metadata/_edit_vertical_guides_ = [-876.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+position = Vector2(956, 539)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_g2146")
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="CanvasLayer" instance=ExtResource("2_8hdsx")]
+position = Vector2(962, 534)
+
+[node name="wall" parent="CanvasLayer" instance=ExtResource("3_enu0h")]
+position = Vector2(1943, 412)
+scale = Vector2(1, 36.76)
+disable_mode = 1
+
+[node name="wall2" parent="CanvasLayer" instance=ExtResource("3_enu0h")]
+position = Vector2(-19, 540)
+scale = Vector2(1, 28.52)
+
+[node name="wall3" parent="CanvasLayer" instance=ExtResource("3_enu0h")]
+position = Vector2(1105, -19)
+scale = Vector2(52.44, 1)
+
+[node name="wall4" parent="CanvasLayer" instance=ExtResource("3_enu0h")]
+position = Vector2(963, 1102)
+scale = Vector2(49.5917, 1)
+
+[node name="btnOpenMenuFloat" type="Button" parent="CanvasLayer"]
+z_index = 1
+offset_left = 803.0
+offset_top = 25.0
+offset_right = 1118.0
+offset_bottom = 170.0
+theme_override_font_sizes/font_size = 100
+text = "Menu"
+script = ExtResource("5_7aj5e")
+
+[node name="menuFloat" parent="CanvasLayer" instance=ExtResource("5_v7p1c")]
+process_mode = 3
+visible = false
+z_index = 1
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 1.0
+offset_bottom = 4.0
+
+[node name="UpGoal" type="Area2D" parent="CanvasLayer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/UpGoal"]
+position = Vector2(958, 73.75)
+shape = SubResource("RectangleShape2D_1pete")
+
+[node name="DownGoal" type="Area2D" parent="CanvasLayer"]
+position = Vector2(0, 878)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/DownGoal"]
+position = Vector2(953, 185)
+shape = SubResource("RectangleShape2D_6vd3n")
+
+[node name="LeftGoal" type="Area2D" parent="CanvasLayer"]
+position = Vector2(0, 878)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/LeftGoal"]
+position = Vector2(17, -347.5)
+shape = SubResource("RectangleShape2D_d2pp6")
+
+[node name="RightGoal" type="Area2D" parent="CanvasLayer"]
+position = Vector2(0, 878)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/RightGoal"]
+position = Vector2(1905, -350)
+shape = SubResource("RectangleShape2D_d2pp6")
+
+[node name="accionRealizando" parent="." instance=ExtResource("8_du28g")]
+
+[node name="verTuto" parent="." instance=ExtResource("6_hw0fk")]
+process_mode = 3
+visible = false
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+timeout = 120.0
+
+[connection signal="pressed" from="CanvasLayer/btnOpenMenuFloat" to="." method="_on_btn_open_menu_float_pressed"]
+[connection signal="body_entered" from="CanvasLayer/UpGoal" to="." method="_on_up_goal_body_entered"]
+[connection signal="body_entered" from="CanvasLayer/DownGoal" to="." method="_on_down_goal_body_entered"]
+[connection signal="body_entered" from="CanvasLayer/LeftGoal" to="." method="_on_left_goal_body_entered"]
+[connection signal="body_entered" from="CanvasLayer/RightGoal" to="." method="_on_right_goal_body_entered"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

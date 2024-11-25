@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://cwv5anaygnvd8"]
+
+[ext_resource type="Texture2D" uid="uid://dsix0b5q5l3y3" path="res://characters/dinos-removebg-preview.png" id="1_wapa6"]
+
+[sub_resource type="GDScript" id="GDScript_pkntb"]
+script/source = "extends CharacterBody2D
+
+var speed = 600  # Velocidad del personaje
+func _ready():
+	add_to_group(\"player\")
+
+func _physics_process(delta):
+	var direction=Input.get_vector(\"move_left\", \"move_right\", \"move_up\", \"move_down\")
+	velocity =direction*speed
+	move_and_slide()
+
+func move_character(direction: Vector2):
+	# Realiza el movimiento en la dirección especificada
+	position += direction * speed * get_process_delta_time()
+
+func stop_movement():
+	# Detén el movimiento reseteando la posición o haciendo que el personaje se quede quieto
+	pass  # Puedes implementar la lógica que desees aquí, como no mover al personaje
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ttdkt"]
+size = Vector2(26.5, 16.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2iq6c"]
+radius = 23.0217
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ctwik"]
+radius = 13.0
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(1.2, 1.153)
+script = SubResource("GDScript_pkntb")
+
+[node name="Dinos-removebg-preview" type="Sprite2D" parent="."]
+position = Vector2(-0.999985, -1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_wapa6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2(13, 1.75)
+shape = SubResource("RectangleShape2D_ttdkt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(-11.25, 40)
+shape = SubResource("RectangleShape2D_ttdkt")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(5, -23)
+shape = SubResource("CircleShape2D_2iq6c")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(29, -24)
+shape = SubResource("CapsuleShape2D_ctwik")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-13.3333, 13.8768)
+shape = SubResource("CircleShape2D_2iq6c")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-1, 0)

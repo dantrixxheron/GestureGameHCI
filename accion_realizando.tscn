@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://ddpddcqg77s7p"]
+
+[ext_resource type="Script" path="res://lbl.gd" id="2_ljyhc"]
+
+[node name="accionRealizando" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = -1
+anchor_left = 0.808854
+anchor_top = 0.717593
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 34.0
+offset_top = -46.0
+offset_right = -33.0
+offset_bottom = -51.0
+grow_horizontal = 0
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156667
+anchor_top = 0.01
+anchor_right = 0.88
+anchor_bottom = 0.996667
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 4
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.832292
+anchor_top = 0.638889
+anchor_right = 0.999479
+anchor_bottom = 0.719444
+offset_left = -26.0
+offset_top = -46.0
+offset_right = -26.0
+offset_bottom = -46.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 60
+text = "Se detecta:"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_ljyhc")
+metadata/_edit_use_anchors_ = true

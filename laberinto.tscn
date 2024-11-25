@@ -1,0 +1,277 @@
+[gd_scene load_steps=10 format=3 uid="uid://b5cpxbp31732s"]
+
+[ext_resource type="Script" path="res://laberinto.gd" id="1_ymrrh"]
+[ext_resource type="Script" path="res://bkgrnd.gd" id="2_11yth"]
+[ext_resource type="PackedScene" uid="uid://ddpddcqg77s7p" path="res://accion_realizando.tscn" id="3_k1ciq"]
+[ext_resource type="PackedScene" uid="uid://cwv5anaygnvd8" path="res://character_body_2d.tscn" id="4_46rqa"]
+[ext_resource type="PackedScene" uid="uid://cwhm1uebhdeo1" path="res://pared_base.tscn" id="5_0os7q"]
+[ext_resource type="PackedScene" uid="uid://bgbhsjdj1l1kr" path="res://menu.tscn" id="7_sf85v"]
+[ext_resource type="Script" path="res://btn.gd" id="8_mbyap"]
+[ext_resource type="PackedScene" uid="uid://c36idvxvuvb7p" path="res://menu_float.tscn" id="9_8h428"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_72s25"]
+radius = 29.6875
+height = 145.0
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_ymrrh")
+metadata/_edit_vertical_guides_ = [-876.0]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -30
+scale = Vector2(0.7, 0.7)
+transform = Transform2D(0.7, 0, 0, 0.7, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" groups=["bkgrnd"]]
+anchors_preset = -1
+anchor_left = 0.073
+anchor_top = 0.643
+anchor_right = 0.073
+anchor_bottom = 0.643
+offset_left = -153.16
+offset_top = -857.44
+offset_right = 2105.84
+offset_bottom = 614.56
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.28, 1.2)
+color = Color(0, 0, 0, 1)
+script = ExtResource("2_11yth")
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+position = Vector2(1471, 625)
+zoom = Vector2(0.7, 0.7)
+
+[node name="Player" parent="CanvasLayer" instance=ExtResource("4_46rqa")]
+position = Vector2(214.286, 658.571)
+
+[node name="Pared1" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(332.429, 357.143)
+rotation = -3.14159
+scale = Vector2(0.778731, -11.7702)
+
+[node name="Pared2" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1158.57, 115.714)
+rotation = 1.5708
+scale = Vector2(0.719653, 40.3947)
+
+[node name="Pared3" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(2041.43, 894.143)
+scale = Vector2(0.719653, 25.8949)
+
+[node name="Pared4" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(337.429, 1124.14)
+scale = Vector2(0.719473, 14.6745)
+
+[node name="Pared5" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1163.14, 1418.29)
+rotation = 1.5708
+scale = Vector2(0.719653, 40.3947)
+
+[node name="Pared6" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(958.429, 1218.14)
+rotation = 1.5708
+scale = Vector2(0.479652, 19.5147)
+
+[node name="Pared7" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(546.429, 1042.14)
+rotation = 1.5708
+scale = Vector2(0.651879, 10.0603)
+
+[node name="Pared8" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(548.571, 732.857)
+scale = Vector2(0.702214, 7.04265)
+
+[node name="Pared9" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(436.429, 591.143)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.85405)
+
+[node name="Pared10" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(842.429, 904.143)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.06548)
+
+[node name="Pared11" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(752.857, 974.286)
+scale = Vector2(0.639651, 3.95447)
+
+[node name="Pared12" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(938.571, 844.286)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared13" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(965.429, 773.143)
+rotation = 1.5708
+scale = Vector2(0.479652, 10.7855)
+
+[node name="Pared14" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1171.43, 593.143)
+rotation = 1.5708
+scale = Vector2(0.479652, 10.7855)
+
+[node name="Pared15" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1072.43, 1073.14)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.62548)
+
+[node name="Pared16" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(971.429, 1135.71)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared17" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1182.86, 1012.86)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared18" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1464.43, 362.143)
+rotation = 1.5708
+scale = Vector2(0.639651, 3.74411)
+
+[node name="Pared19" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1401.71, 576.286)
+scale = Vector2(0.639651, 10.1969)
+
+[node name="Pared20" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1531.43, 252.143)
+scale = Vector2(0.639651, 6.01405)
+
+[node name="Pared21" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(757.143, 612.857)
+scale = Vector2(0.639651, 8.10548)
+
+[node name="Pared22" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1564.29, 1050)
+rotation = 1.5708
+scale = Vector2(0.479652, 9.9455)
+
+[node name="Pared23" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1822.43, 1221.14)
+rotation = 1.5708
+scale = Vector2(0.479652, 9.9055)
+
+[node name="Pared24" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1372.86, 1137.14)
+scale = Vector2(0.639651, 4.44263)
+
+[node name="Pared25" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1768.57, 985.714)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared26" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1831.43, 660)
+scale = Vector2(0.639651, 3.28834)
+
+[node name="Pared27" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1842.86, 407.143)
+scale = Vector2(0.716126, 3.06833)
+
+[node name="Pared28" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1932.86, 341.428)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.21977)
+
+[node name="Pared29" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1746.71, 455.143)
+rotation = 1.5708
+scale = Vector2(0.639651, 4.79118)
+
+[node name="Pared30" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1662.86, 521.143)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared31" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1742.86, 600)
+rotation = 1.5708
+scale = Vector2(0.639651, 4.66548)
+
+[node name="Pared32" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1671.43, 904.286)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.11689)
+
+[node name="Pared33" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1581.43, 845.714)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared34" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1488.57, 774.286)
+rotation = 1.5708
+scale = Vector2(0.639651, 4.90549)
+
+[node name="Pared36" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1167.14, 367.143)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared35" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(850.429, 433.143)
+rotation = 1.5708
+scale = Vector2(0.479652, 15.1055)
+
+[node name="Pared37" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(951.428, 203.143)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared38" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(741.429, 267.143)
+rotation = 1.5708
+scale = Vector2(0.479652, 10.2655)
+
+[node name="Pared39" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(-21.4286, 797.143)
+scale = Vector2(0.719653, 40.6949)
+
+[node name="Pared40" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1935.71, 1572.86)
+rotation = 1.5708
+scale = Vector2(0.844455, -113.274)
+
+[node name="Pared41" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(2772.86, 975.714)
+scale = Vector2(0.844455, -113.274)
+
+[node name="Pared42" parent="CanvasLayer" instance=ExtResource("5_0os7q")]
+position = Vector2(1280, -27.1429)
+rotation = -1.5708
+scale = Vector2(0.844455, -113.274)
+
+[node name="Area2D" type="Area2D" parent="CanvasLayer"]
+position = Vector2(77, -105)
+scale = Vector2(1.28, 1.2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/Area2D"]
+position = Vector2(1613.95, 285.119)
+shape = SubResource("CapsuleShape2D_72s25")
+
+[node name="btnOpenMenuFloat" type="Button" parent="CanvasLayer"]
+offset_left = 2302.86
+offset_top = 62.8571
+offset_right = 2690.86
+offset_bottom = 238.857
+theme_override_font_sizes/font_size = 100
+text = "Menu"
+script = ExtResource("8_mbyap")
+
+[node name="accionRealizando" parent="CanvasLayer" instance=ExtResource("3_k1ciq")]
+offset = Vector2(5, -20)
+transform = Transform2D(1, 0, 0, 1, 5, -20)
+
+[node name="Menu" parent="." instance=ExtResource("7_sf85v")]
+z_index = 1
+offset_left = 429.0
+offset_right = 429.0
+
+[node name="menuFloat" parent="." instance=ExtResource("9_8h428")]
+process_mode = 3
+z_index = 1
+offset_left = 429.0
+offset_top = 1.0
+offset_right = 429.0
+offset_bottom = 1.0
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="body_exited" from="CanvasLayer/Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="pressed" from="CanvasLayer/btnOpenMenuFloat" to="." method="_on_btn_open_menu_float_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]

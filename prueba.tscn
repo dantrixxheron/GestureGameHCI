@@ -1,0 +1,216 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp0sk147xrkuy"]
+
+[ext_resource type="PackedScene" uid="uid://cwv5anaygnvd8" path="res://character_body_2d.tscn" id="1_ev1m3"]
+[ext_resource type="PackedScene" uid="uid://cwhm1uebhdeo1" path="res://pared_base.tscn" id="2_jo5k0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(0.7, 0.7)
+transform = Transform2D(0.7, 0, 0, 0.7, 0, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.44948
+anchor_bottom = 1.45926
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="CanvasLayer" instance=ExtResource("1_ev1m3")]
+position = Vector2(212.857, 761.429)
+
+[node name="Pared1" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(352.286, 386.857)
+rotation = -3.14159
+scale = Vector2(0.778731, -11.7702)
+
+[node name="Pared2" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1180.29, 142.857)
+rotation = 1.5708
+scale = Vector2(0.719653, 40.3947)
+
+[node name="Pared3" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(2061.29, 923.857)
+scale = Vector2(0.719653, 25.8949)
+
+[node name="Pared4" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(357.286, 1153.86)
+scale = Vector2(0.719473, 14.6745)
+
+[node name="Pared5" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1187.29, 1450.86)
+rotation = 1.5708
+scale = Vector2(0.719653, 40.3947)
+
+[node name="Pared6" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(978.286, 1247.86)
+rotation = 1.5708
+scale = Vector2(0.479652, 19.5147)
+
+[node name="Pared7" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(566.286, 1071.86)
+rotation = 1.5708
+scale = Vector2(0.651879, 10.4032)
+
+[node name="Pared8" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(566.286, 773.857)
+scale = Vector2(0.702214, 6.47121)
+
+[node name="Pared9" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(456.286, 620.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.62548)
+
+[node name="Pared10" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(862.286, 933.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.06548)
+
+[node name="Pared11" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(774.286, 1003.86)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared12" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(965.286, 872.857)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared13" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(985.286, 802.857)
+rotation = 1.5708
+scale = Vector2(0.479652, 10.7855)
+
+[node name="Pared14" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1191.29, 622.857)
+rotation = 1.5708
+scale = Vector2(0.479652, 10.7855)
+
+[node name="Pared15" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1092.29, 1102.86)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.62548)
+
+[node name="Pared16" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(998.286, 1169.86)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared17" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1212.29, 1041.86)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared18" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1484.29, 391.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 3.46548)
+
+[node name="Pared19" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1427.29, 608.857)
+scale = Vector2(0.639651, 9.6255)
+
+[node name="Pared20" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1551.29, 281.857)
+scale = Vector2(0.639651, 5.78548)
+
+[node name="Pared21" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(779.286, 633.857)
+scale = Vector2(0.639651, 8.10548)
+
+[node name="Pared22" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1581.29, 1072.86)
+rotation = 1.5708
+scale = Vector2(0.479652, 9.9455)
+
+[node name="Pared23" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1842.29, 1250.86)
+rotation = 1.5708
+scale = Vector2(0.479652, 9.9055)
+
+[node name="Pared24" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1392.29, 1164.86)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared25" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1806.29, 1011.86)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared26" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1844.29, 720.857)
+scale = Vector2(0.639651, 2.94548)
+
+[node name="Pared27" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1854.29, 418.857)
+scale = Vector2(0.639651, 2.45906)
+
+[node name="Pared28" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1953.29, 365.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.50548)
+
+[node name="Pared29" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1772.29, 484.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 4.50548)
+
+[node name="Pared30" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1681.29, 550.857)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared31" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1758.29, 641.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 4.66548)
+
+[node name="Pared32" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1694.29, 934.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 5.74548)
+
+[node name="Pared33" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1593.29, 873.857)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared34" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1494.29, 806.857)
+rotation = 1.5708
+scale = Vector2(0.639651, 4.10548)
+
+[node name="Pared36" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1191.29, 396.857)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared35" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(870.286, 462.857)
+rotation = 1.5708
+scale = Vector2(0.479652, 15.1055)
+
+[node name="Pared37" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(971.286, 232.857)
+scale = Vector2(0.639651, 3.58548)
+
+[node name="Pared38" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(761.286, 301.857)
+rotation = 1.5708
+scale = Vector2(0.479652, 10.2655)
+
+[node name="Pared39" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(-4.28574, 844.286)
+scale = Vector2(0.719653, 40.6949)
+
+[node name="Pared40" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1843.14, 1573.71)
+rotation = 1.5708
+scale = Vector2(0.844455, -113.274)
+
+[node name="Pared41" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(2776.14, 1077.71)
+scale = Vector2(0.844455, -113.274)
+
+[node name="Pared42" parent="CanvasLayer" instance=ExtResource("2_jo5k0")]
+position = Vector2(1190.14, -24.2857)
+rotation = -1.5708
+scale = Vector2(0.844455, -113.274)
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+position = Vector2(1380, 768)
+scale = Vector2(1, 1e-05)
+zoom = Vector2(0.7, 0.7)
